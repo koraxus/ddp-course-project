@@ -1,0 +1,42 @@
+---
+title: "Time Machine in a 1920’s Motor Vehicle"
+author: "koraxus"
+date: "1/25/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Background
+
+Suppose you were able to turn a 1920's motor vehicle into a time machine.
+It is of paramount importance to be able to properly estimate stopping distance at various speeds.
+
+## Why is proper distance estimation important?
+
+In the Back To The Future Movie, Dr. Brown does not adequately calculate stopping distance and the results are:
+
+- Marty McFly crashes into a barn after traveling back in time
+- Marty McFly crashes into a movie theater after traveling forward in time.
+
+A stopping distance calculator will enable time travelers to properly plan travel.
+At 88 mph, the flux capacitor activates time travel.
+
+
+## Predicted Stopping Distance vs Speed
+
+```{r cars, echo = FALSE}
+model1<-lm(dist ~ speed, data= cars)
+plot(cars$speed, mtcars$dist, xlab = "Speed (mph)",
+         ylab= "Stopping Distance (ft)", bty="n", pch=16,
+         xlim =  c(10, 150), ylim = c(50,1000))
+abline(model1, col="red", lwd=2)
+abline(v=88, col="blue", lwd=3)
+```
+
+## Thank You
+
+
+
