@@ -16,18 +16,18 @@ It is of paramount importance to be able to properly estimate stopping distance 
 
 ## Why is proper distance estimation important?
 
-In the Back To The Future Movie, Dr. Brown does not adequately calculate stopping distance and the results are:
+In the Back To The Future Movie, the stopping distance for the vehicle is not properly calculated and Marty McFly crashes into...
 
-- Marty McFly crashes into a barn after traveling back in time
-- Marty McFly crashes into a movie theater after traveling forward in time.
+- a barn after traveling back in time
+- a movie theater after traveling forward in time.
 
-A stopping distance calculator will enable time travelers to properly plan travel.
-At 88 mph, the flux capacitor activates time travel.
+A stopping distance calculator would enable time travelers to properly plan travel.
+At 88 mph, the flux capacitor activates time travel, which is indicated by a blue line on the following plot.
 
 
 ## Predicted Stopping Distance vs Speed
 
-```{r cars, echo = FALSE}
+```{r cars, echo = TRUE, fig.width=4, fig.height=3, }
 model1<-lm(dist ~ speed, data= cars)
 plot(cars$speed, mtcars$dist, xlab = "Speed (mph)",
          ylab= "Stopping Distance (ft)", bty="n", pch=16,
